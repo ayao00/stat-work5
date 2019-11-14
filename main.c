@@ -14,5 +14,7 @@ int main(){
   printf("%s\n", ctime(&test.st_atime));
 
   char buffer[100];
-  sprintf(buffer, "%d B\t%d KB\t%d MB\t%d GB", test.st_size, test.st_size);
+  sprintf(buffer, "%lld B\t%lld KB\t%lld MB\t%lld GB", test.st_size, test.st_size/1000, test.st_size/1000000, test.st_size/1000000000);
+
+  printf("%s\n", buffer);
 }
